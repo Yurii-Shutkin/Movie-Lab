@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    background: #161414;
+    height: 80px;
+    padding: 0 0 0 40px;
+    align-items: center;
+
+    &__logo {
+        color: #fff;
+        font-size: 30px;
+        margin-right: 200px;
+    }
+
+    &__search-panel {
+        .active {
+            border-bottom: 3px solid #fff;
+        }
+        
+        input {
+            width: 760px;
+            height: 45px;
+            outline: none;
+            background: transparent;
+            border: transparent;
+            border-bottom: 3px solid rgba(256, 256, 256, .47);
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+}
