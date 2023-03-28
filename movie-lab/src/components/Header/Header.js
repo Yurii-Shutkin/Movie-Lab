@@ -16,12 +16,11 @@ export default function Header({ result }) {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        server.findMovie( inputKey, result )
-        setInputKey('')
     }
 
     const onChangeHandler = e => {
         setInputKey(e.target.value)
+        server.findMovie( inputKey, result )
     }
 
     return (
