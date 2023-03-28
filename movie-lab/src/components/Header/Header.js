@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './Header.scss'
+import { server } from '../../server';
 
-export default function Header() {
-    const [movieName, setMovieName] = useState('');
-    const [isActive, setIsActive] = useState()
+export default function Header({ result }) {
+    const [inputKey, setInputKey] = useState('');
+    const [isActive, setIsActive] = useState();
+    
     const focusHandler = () => {
         setIsActive('active')
     }
@@ -12,22 +14,34 @@ export default function Header() {
         setIsActive('');
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault()
+        server.findMovie( inputKey, result )
+        setInputKey('')
+    }
+
+    const onChangeHandler = e => {
+        setInputKey(e.target.value)
+    }
+
     return (
         <div className='header'>
             <div className='header__logo'>
                 <span>Movie Lab</span>
             </div>
             <div className='header__search-panel'>
-                <input 
-                    className={isActive}
-                    type='text' 
-                    placeholder='Type to search...'
-                    value={movieName}
-                    onChange={e => setMovieName(e.target.value)}
-                    onFocus={focusHandler}
-                    onBlur={blurHandler}
-                    >
-                </input>
+                <form onSubmit={e => submitHandler(e)}>
+                    <input 
+                        className={isActive}
+                        type='text' 
+                        placeholder='Type to search...'
+                        value={inputKey}
+                        onChange={e => onChangeHandler(e)}
+                        onFocus={focusHandler}
+                        onBlur={blurHandler}
+                        >
+                    </input>
+                </form>
             </div>
         </div>
     )
