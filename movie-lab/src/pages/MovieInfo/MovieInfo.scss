@@ -1,0 +1,77 @@
+.movie {
+    &-card {
+        margin-top: 50px;
+    }
+    &-title {
+        margin-bottom: 30px;
+    }
+    &-poster {
+        img {
+            max-width: 305px;
+            max-height: 415px;
+        }
+    }
+
+    &-trailer {
+        display: flex;
+        margin-bottom: 75px;
+    }
+
+    &-desc {
+        padding: 30px 20px;
+        background-color: #282828;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-bottom: 85px;
+    }
+}
+
+.cast {
+    margin-bottom: 50px;
+
+    &-title {
+        margin-bottom: 30px;
+    }
+    &-cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-plug {
+        display: flex;
+        width: 160px;
+        height: 240px;
+        background-color: #282828;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+}
+
+.details {
+    margin-bottom: 60px;
+    
+    &-info {
+        background-color: #282828;
+        padding: 20px 30px;
+        border-radius: 10px;
+    }
+}
+
+.recomendations {
+    margin-bottom: 200px;
+
+    &-title {
+        margin-bottom: 40px;
+    }
+
+    &-cards {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &-card {
+        margin-right: 30px;
+    }
+}

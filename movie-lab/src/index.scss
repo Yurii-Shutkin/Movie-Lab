@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 code {
@@ -22,7 +23,11 @@ h1 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   max-width: 1440px;
-  padding: 0 60px 0;
+  padding: 0 120px 0;
 }

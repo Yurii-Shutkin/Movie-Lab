@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
 import Home from './pages/Home/Home';
+import MovieInfo from './pages/MovieInfo/MovieInfo';
 import './App.scss';
 // import { server } from './server';
 
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='home' element={<Home findedMovies={result} />} />
+            <Route path='movie_info' element={<MovieInfo />} />
           </Routes>
         </BrowserRouter>
         <Footer />

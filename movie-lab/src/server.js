@@ -16,12 +16,17 @@ export const server = {
     },
 
     findMovie: async (title, state) => {
-        const data = await axios.get(`${API_URL}${SEARCH_PATH}`, {
+        await axios.get(`${API_URL}${SEARCH_PATH}`, {
             params: {
                 api_key: apiKey,
                 query: title
             }
         })
-        state(data.data.results)
+        .then(res => {
+            state(res.data.results)
+            if(res.data.results.length === 0) {
+                state([{id: 1, title: 'not found'}])
+            }
+        })
     }
 }
