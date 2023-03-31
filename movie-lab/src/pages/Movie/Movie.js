@@ -1,9 +1,9 @@
 import React from 'react'
 import YouTube from 'react-youtube'
 import fcImg from './fc-img.png'
-import './MovieInfo.scss'
+import './Movie.scss'
 
-export default function MovieInfo() {
+export default function Movie() {
     const opts = {
         width: '780',
         height: '415'

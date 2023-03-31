@@ -16,13 +16,14 @@ export default function Home ({ findedMovies }) {
             server.getMovies(setMovieList);  
         }
       }, [findedMovies])
-    
+
     return (
         <div className='container'>
         <div className='movies'>
             {movieList.map(movie => {
                 return <MovieCard
                     key={movie.id} 
+                    id={movie.id}
                     title={movie.title}
                     img={movie.poster_path}
                 />
